@@ -21,20 +21,20 @@
 
 > UI 없이 순수 로직만 구현. 이후 컴포넌트가 여기에 의존.
 
-- [ ] `lib/types.ts` — 핵심 타입 정의
+- [x] `lib/types.ts` — 핵심 타입 정의
   - `Token` (id, text, color, index)
   - `ProbabilityEntry` (token, probability)
   - `TreeNode` (token, probability, children)
-- [ ] `lib/tokenColors.ts` — 토큰 인덱스 기반 파스텔 색상 배열 반환
-- [ ] `lib/probabilityData.ts` — bigram-like 확률 사전
+- [x] `lib/tokenColors.ts` — 토큰 인덱스 기반 파스텔 색상 배열 반환
+- [x] `lib/probabilityData.ts` — bigram-like 확률 사전
   - 품사 카테고리별 다음 토큰 후보 테이블 (동사→명사, 관사→명사, 등)
   - `getNextTokens(token: string): ProbabilityEntry[]` 함수
   - `getTreeData(token: string): TreeNode` 함수 (2단계)
-- [ ] `hooks/useTokenizer.ts` — 입력 문자열 → Token 배열 변환
+- [x] `hooks/useTokenizer.ts` — 입력 문자열 → Token 배열 변환
   - 단어 / 공백 / 문장부호 분리 regex 구현
-- [ ] `hooks/useStats.ts` — Token 배열 → 통계 객체 계산
+- [x] `hooks/useStats.ts` — Token 배열 → 통계 객체 계산
   - Total Tokens, Characters, T/C Ratio, Unique Tokens, Avg Token Length
-- [ ] `store/useAppStore.ts` — Zustand 전역 스토어
+- [x] `store/useAppStore.ts` — Zustand 전역 스토어
   - `selectedToken: Token | null`
   - `isPopupOpen: boolean`
   - `setSelectedToken`, `closePopup` 액션
